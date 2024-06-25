@@ -2,7 +2,7 @@
 * Random number generator with range slider
 
 ## Screenshot
-![here](/screenshot.png)
+![here](./Screenshot.png)
 
 ## Authors
 
