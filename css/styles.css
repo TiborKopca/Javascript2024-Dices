@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background-color: #e5e4e4;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+.centrar {
+  height: auto;
+  width: 95%;
+  background-color: rgb(94, 91, 89);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 2rem;
+
+  & h1 {
+    font-size: 3rem;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+  }
+  & .picture {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+    height: auto;
+  }
+
+  & img {
+    height: 100px;
+    width: 100px;
+  }
+  & .range-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    & .boton {
+      /* width: 200px;
+        height: 200px; */
+      color: white;
+      font-size: 1.5rem;
+      background-color: rgb(3, 65, 75);
+      box-shadow: 2px 2px 13px rgb(0, 0, 0);
+      border-radius: 2rem;
+      border: none;
+      padding: 1.5rem;
+      margin: 1rem;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: rgb(74, 197, 216);
+        box-shadow: 2px 2px 13px rgb(0, 0, 0);
+        border-radius: 2rem;
+        border: none;
+        padding: 1.5rem;
+        margin: 1rem;
+        cursor: pointer;
+      }
+    }
+    & .range-value {
+      font-size: 1rem;
+    }
+  }
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: rgb(245, 244, 244);
+  cursor: pointer;
+  width: 15rem;
+  height: 0.5rem;
+  border-radius: 10px;
+}
+
+
+/***** Track Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-runnable-track {
+  background: rgb(27, 22, 22);
+  height: 1rem;
+  border-radius: 10px;
+}
+
+/******** Firefox ********/
+input[type="range"]::-moz-range-track {
+  background: rgb(245, 244, 244);
+  height: 1rem;
+  border-radius: 10px;
+}
+/******** MS ********/
+input[type="range"]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+
+
+/***** Thumb Styles *****/
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]::-webkit-slider-thumb {
+  /* Override default look */
+  -webkit-appearance: none;
+  appearance: none;
+  /* margin-top = (track height in pixels / 2) - (thumb height in pixels /2) */
+  margin-top: -0.5rem;
+  /* Centers thumb on the track */
+  background-color: #ece8e8;
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}
+
+
+/***** Focus Styles *****/
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/***** Chrome, Safari, Opera, and Edge Chromium *****/
+input[type="range"]:focus::-webkit-slider-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+  box-shadow: 3px 3px 3px #000000, 0px 0px 1px #0d0d0d;
+}
+
+/******** Firefox ********/
+input[type="range"]:focus::-moz-range-thumb {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type="range"]::-ms-track {
+  border: 1px solid #053a5f;
+  outline: 3px solid #053a5f;
+  outline-offset: 0.125rem;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
