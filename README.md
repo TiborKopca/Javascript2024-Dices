@@ -1,8 +1,9 @@
 # Simple project - Javascript - HTML - CSS
 * Random number generator with range slider
+* Statistics for the generated numbers in the grand total of rounds
 
 ## Screenshot
-![here](./Screenshot.png)
+![here](./Screenshot2.png)
 
 ## Authors
 

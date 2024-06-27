@@ -1,3 +1,10 @@
+:root {
+  --color-primary: rgb(7, 95, 109);
+  --color-secondary: rgb(74, 197, 216);
+  --bg-color1: rgb(94, 91, 89);
+  --bg-color2: #e5e4e4;
+  --color-dice: rgb(224 0 3);
+}
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +16,7 @@ html {
 body {
   background-color: #e5e4e4;
   width: 100vw;
+  min-width: 400px;
   height: auto;
   display: flex;
   justify-content: center;
@@ -19,6 +27,10 @@ body {
   height: auto;
   width: 95%;
   background-color: rgb(94, 91, 89);
+  background: url(https://img.freepik.com/free-vector/art-deco-frame-design_23-2150436642.jpg?t=st=1719425775~exp=1719429375~hmac=ba6ec28…&w=740);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -31,13 +43,42 @@ body {
     text-align: center;
     color: white;
   }
+  & .analitics {
+    width: 40%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, auto);
+    gap: 0.3rem;
+    place-items: center;
+    /* padding: 2rem; */
+  }
+  & h2 {
+    font-size: 1.5rem;
+    background-color: var(--color-dice);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  & h3 {
+    font-size: 1.5rem;
+    /* width: 2rem; */
+    height: 2rem;
+    color: white;
+    text-align: center;
+  }
   & .picture {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     padding: 2rem;
-    height: auto;
+    /* max-height: 28rem; */
+    flex: 0 1 28rem;
   }
 
   & img {
@@ -50,12 +91,15 @@ body {
     align-items: center;
     gap: 1rem;
 
+    & label {
+      color: white;
+    }
     & .boton {
       /* width: 200px;
         height: 200px; */
       color: white;
       font-size: 1.5rem;
-      background-color: rgb(3, 65, 75);
+      background-color: var(--color-primary);
       box-shadow: 2px 2px 13px rgb(0, 0, 0);
       border-radius: 2rem;
       border: none;
@@ -63,7 +107,7 @@ body {
       margin: 1rem;
       transition: all 0.3s ease-in-out;
       &:hover {
-        background-color: rgb(74, 197, 216);
+        background-color: var(--color-secondary);
         box-shadow: 2px 2px 13px rgb(0, 0, 0);
         border-radius: 2rem;
         border: none;
@@ -87,7 +131,6 @@ input[type="range"] {
   height: 0.5rem;
   border-radius: 10px;
 }
-
 
 /***** Track Styles *****/
 /***** Chrome, Safari, Opera, and Edge Chromium *****/
@@ -114,8 +157,6 @@ input[type="range"]::-ms-track {
   color: transparent;
 }
 
-
-
 /***** Thumb Styles *****/
 /***** Chrome, Safari, Opera, and Edge Chromium *****/
 input[type="range"]::-webkit-slider-thumb {
@@ -130,7 +171,6 @@ input[type="range"]::-webkit-slider-thumb {
   height: 2rem;
   width: 2rem;
 }
-
 
 /***** Focus Styles *****/
 /* Removes default focus */
@@ -159,4 +199,3 @@ input[type="range"]::-ms-track {
   outline-offset: 0.125rem;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
-
